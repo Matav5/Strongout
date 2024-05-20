@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workout>
+        <nazev>Kompletní trénink celého těla</nazev>
+        <popis>Komplexní trénink pro celé tělo</popis>
+        <cviky>
+            <cvik>
+                <nazev>Dřepy</nazev>
+                <sety>
+                    <set>
+                        <vaha>50</vaha>
+                        <opak>15</opak>
+                    </set>
+                    <set>
+                        <vaha>60</vaha>
+                        <opak>12</opak>
+                    </set>
+                    <set>
+                        <vaha>70</vaha>
+                        <opak>10</opak>
+                    </set>
+                </sety>
+            </cvik>
+            <cvik>
+                <nazev>Bench Press</nazev>
+                <sety>
+                    <set>
+                        <vaha>40</vaha>
+                        <opak>10</opak>
+                    </set>
+                    <set>
+                        <vaha>50</vaha>
+                        <opak>8</opak>
+                    </set>
+                    <set>
+                        <vaha>60</vaha>
+                        <opak>6</opak>
+                    </set>
+                </sety>
+            </cvik>
+        </cviky>
+</workout>
