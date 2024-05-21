@@ -1,41 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workout>
-        <nazev>Kompletní trénink celého těla</nazev>
-        <popis>Komplexní trénink pro celé tělo</popis>
+<plan>
+    <nazev>Kompletní tréninkový plán</nazev>
+    <popis>Komplexní tréninkový plán pro celé tělo</popis>
+    <cil>Zlepšení celkové kondice a síly</cil>
+    <workout>
+        <nazev>Trénink horní části těla</nazev>
+        <popis>Trénink zaměřený na horní část těla</popis>
+        <trvani>90</trvani>
+        <cviky>
+            <cvik>
+                <nazev>Bench Press</nazev>
+                <sety>4</sety>
+                <repy>8</repy>
+                <odpocinek>2</odpocinek>
+            </cvik>
+            <cvik>
+                <nazev>Shyby</nazev>
+                <sety>3</sety>
+                <repy>10</repy>
+                <odpocinek>2</odpocinek>
+            </cvik>
+        </cviky>
+    </workout>
+    <workout>
+        <nazev>Trénink dolní části těla</nazev>
+        <popis>Trénink zaměřený na dolní část těla</popis>
+        <trvani>75</trvani>
         <cviky>
             <cvik>
                 <nazev>Dřepy</nazev>
-                <sety>
-                    <set>
-                        <vaha>50</vaha>
-                        <opak>15</opak>
-                    </set>
-                    <set>
-                        <vaha>60</vaha>
-                        <opak>12</opak>
-                    </set>
-                    <set>
-                        <vaha>70</vaha>
-                        <opak>10</opak>
-                    </set>
-                </sety>
+                <sety>4</sety>
+                <repy>6</repy>
+                <odpocinek>2</odpocinek>
             </cvik>
             <cvik>
-                <nazev>Bench Press</nazev>
-                <sety>
-                    <set>
-                        <vaha>40</vaha>
-                        <opak>10</opak>
-                    </set>
-                    <set>
-                        <vaha>50</vaha>
-                        <opak>8</opak>
-                    </set>
-                    <set>
-                        <vaha>60</vaha>
-                        <opak>6</opak>
-                    </set>
-                </sety>
+                <nazev>Výpady</nazev>
+                <sety>3</sety>
+                <repy>12</repy>
+                <odpocinek>1.5</odpocinek>
             </cvik>
         </cviky>
-</workout>
+    </workout>
+    <workout>
+        <nazev>Kardio trénink</nazev>
+        <popis>Trénink zaměřený na zlepšení kardiovaskulární kondice</popis>
+        <trvani>60</trvani>
+        <cviky>
+            <cvik>
+                <nazev>Běh na běžeckém pásu</nazev>
+                <sety>1</sety>
+                <repy>1</repy>
+                <odpocinek>0</odpocinek>
+            </cvik>
+            <cvik>
+                <nazev>Jízda na kole</nazev>
+                <sety>1</sety>
+                <repy>1</repy>
+                <odpocinek>0</odpocinek>
+            </cvik>
+        </cviky>
+    </workout>
+</plan>

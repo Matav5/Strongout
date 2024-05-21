@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="workout" >
+    <xs:element name="plan">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="nazev" type="xs:string"/>
                 <xs:element name="popis" type="xs:string"/>
-                <xs:element name="cviky">
+                <xs:element name="cil" type="xs:string"/>
+                <xs:element name="workout" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="cvik" maxOccurs="unbounded">
+                            <xs:element name="nazev" type="xs:string"/>
+                            <xs:element name="popis" type="xs:string"/>
+                            <xs:element name="trvani" type="xs:float"/>
+                            <xs:element name="cviky">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="nazev" type="xs:string"/>
-                                        <xs:element name="sety">
+                                        <xs:element name="cvik" minOccurs="0" maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="set" maxOccurs="unbounded">
-                                                        <xs:complexType>
-                                                            <xs:sequence>
-                                                                <xs:element name="vaha" type="xs:float"/>
-                                                                <xs:element name="opak" type="xs:int"/>
-                                                            </xs:sequence>
-                                                        </xs:complexType>
-                                                    </xs:element>
+                                                    <xs:element name="nazev" type="xs:string" minOccurs="0"/>
+                                                    <xs:element name="sety" type="xs:int" minOccurs="0"/>
+                                                    <xs:element name="repy" type="xs:int" minOccurs="0"/>
+                                                    <xs:element name="odpocinek" type="xs:float" minOccurs="0"/>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>

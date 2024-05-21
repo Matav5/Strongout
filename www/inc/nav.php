@@ -14,19 +14,22 @@
     </div>
     <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
       <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7">
-        <a class="font-medium text-blue-600 md:py-6 dark:text-blue-500" href="index.php" aria-current="page">Domů</a>
+        <?php
+        $current_page = basename($_SERVER['PHP_SELF']);
+        ?>
+        <a class="font-medium md:py-6 <?= $current_page == 'index.php' ? 'text-blue-600 dark:text-blue-500 ' : 'text-gray-500 dark:text-neutral-400 ' ?>" href="index.php">Domů</a>
 
-        <a class="font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-neutral-400 dark:hover:text-neutral-500" href="workouts.php">Workouty</a>
-        <a class="font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-neutral-400 dark:hover:text-neutral-500" href="upload.php">Nahrát</a>
-
-        
+        <a class="font-medium hover:text-gray-400 md:py-6 dark:hover:text-neutral-500 <?= $current_page == 'workouts.php' ?'text-blue-600 dark:text-blue-500 ' : 'text-gray-500 dark:text-neutral-400 ' ?>" href="workouts.php">Plány</a>
+        <a class="font-medium hover:text-gray-400 md:py-6 dark:hover:text-neutral-500 <?= $current_page == 'addPlan.php' ?'text-blue-600 dark:text-blue-500 ' : 'text-gray-500 dark:text-neutral-400 ' ?>" href="addPlan.php">Přidat Plán</a>
+        <a class="font-medium hover:text-gray-400 md:py-6  dark:hover:text-neutral-500 <?= $current_page == 'upload.php' ?'text-blue-600 dark:text-blue-500 ' : 'text-gray-500 dark:text-neutral-400 ' ?>" href="upload.php">Nahrát</a>
 
         <a class="flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600 md:border-s md:border-gray-300 md:my-6 md:ps-6 dark:border-neutral-700 dark:text-neutral-400 dark:hover:text-blue-500" href="login.php">
           <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          Přihlásit se
+          <?=$jePrihlaseny ? $prezdivka: "Přihlásit se" ?>
         </a>
       </div>
     </div>
   </nav>
 </header>
+<!-- ========== END HEADER ========== -->
 <!-- ========== END HEADER ========== -->

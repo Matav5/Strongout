@@ -6,19 +6,16 @@ require "$INC/db.php";
 
 xmlFileList($WORKOUT);
 function jeFavorit($basename) {
-    // Předpokládáme, že $db je instance PDO pro připojení k databázi
     global $db;
     $id = @$_SESSION['id']; 
     if($id == null){
         return false;
     }
-    // Připravíme SQL dotaz pro kontrolu existence záznamu
     $stmt = $db->prepare("SELECT * FROM favorites WHERE fk_uzivatel = ? AND soubor = ?");
     $stmt->bind_param("is", $id, $basename);
     $stmt->execute();
     $result = $stmt->get_result();
     
-    //Vrátíme true pokud něco vrátí
     return $result->num_rows > 0;
 }
 
@@ -42,7 +39,18 @@ function jeFavorit($basename) {
 
 <?php if ($workout = @$_GET['workout']) { ?>
     <hr>
-    <?= xmlTransform("$WORKOUT/$workout.xml", "$XML/workout.xsl") ?>
+    <div class="container mx-auto">
+        <h2 class="text-2xl font-bold my-4">Detaily plánu: <?= htmlspecialchars($workout) ?>
+           <a href="editPlan.php?workout=<?= $workout ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Edit</a>
+           <a href="deletePlan.php?workout=<?= $workout ?>" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</a>
+        </h2>
+        <div class="border border-gray-300 p-4 rounded-lg">
+            <div class="text-gray-700">
+            <?= xmlTransform("$WORKOUT/$workout.xml", "$XML/workout.xsl") ?>
+            </div>
+        </div>
+    </div>
+   
 <?php } ?>
 <script>
     let beziRequest = false;
