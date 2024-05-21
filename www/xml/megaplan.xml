@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plan>
+    <nazev>Pokročilý tréninkový plán</nazev>
+    <popis>Intenzivní tréninkový plán pro pokročilé</popis>
+    <cil>Zvýšení svalové hmoty a vytrvalosti</cil>
+    <workout>
+        <nazev>Trénink hrudníku a tricepsů</nazev>
+        <popis>Trénink zaměřený na hrudník a tricepsy</popis>
+        <trvani>80</trvani>
+        <cviky>
+            <cvik>
+                <nazev>Bench Press s jednoručkami</nazev>
+                <sety>4</sety>
+                <repy>10</repy>
+                <odpocinek>1.5</odpocinek>
+            </cvik>
+            <cvik>
+                <nazev>Tricepsové kliky</nazev>
+                <sety>3</sety>
+                <repy>12</repy>
+                <odpocinek>1.5</odpocinek>
+            </cvik>
+        </cviky>
+    </workout>
+    <workout>
+        <nazev>Trénink zad a bicepsů</nazev>
+        <popis>Trénink zaměřený na záda a bicepsy</popis>
+        <trvani>85</trvani>
+        <cviky>
+            <cvik>
+                <nazev>Mrtvý tah</nazev>
+                <sety>4</sety>
+                <repy>8</repy>
+                <odpocinek>2</odpocinek>
+            </cvik>
+            <cvik>
+                <nazev>Bicepsové zdvihy</nazev>
+                <sety>3</sety>
+                <repy>10</repy>
+                <odpocinek>1.5</odpocinek>
+            </cvik>
+        </cviky>
+    </workout>
+    <workout>
+        <nazev>Trénink nohou</nazev>
+        <popis>Trénink zaměřený na nohy</popis>
+        <trvani>70</trvani>
+        <cviky>
+            <cvik>
+                <nazev>Leg Press</nazev>
+                <sety>4</sety>
+                <repy>12</repy>
+                <odpocinek>2</odpocinek>
+            </cvik>
+            <cvik>
+                <nazev>Výpady s činkami</nazev>
+                <sety>3</sety>
+                <repy>15</repy>
+                <odpocinek>1.5</odpocinek>
+            </cvik>
+        </cviky>
+    </workout>
+    <workout>
+        <nazev>HIIT trénink</nazev>
+        <popis>Vysoce intenzivní intervalový trénink</popis>
+        <trvani>45</trvani>
+        <cviky>
+            <cvik>
+                <nazev>Burpees</nazev>
+                <sety>3</sety>
+                <repy>15</repy>
+                <odpocinek>1</odpocinek>
+            </cvik>
+            <cvik>
+                <nazev>Skákání přes švihadlo</nazev>
+                <sety>3</sety>
+                <repy>100</repy>
+                <odpocinek>1</odpocinek>
+            </cvik>
+        </cviky>
+    </workout>
+</plan>

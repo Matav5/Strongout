@@ -4,7 +4,6 @@ require "$INC/tools.php";
 require "$INC/nav.php";
 $workout = @$_GET['workout'];
 $xmlPath = "$WORKOUT/$workout.xml";
-echo $xmlPath;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //print_r($_POST["workouts"]);
@@ -14,12 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $plan->nazev = $_POST['nazev'];
         $plan->popis = $_POST['popis'];
         $plan->cil = $_POST['cil'];
-
-        // Instead of unsetting all workouts, we will update or add new ones
-        $existingWorkouts = [];
-        foreach ($plan->workout as $existingWorkout) {
-            $existingWorkouts[] = $existingWorkout;
-        }
 
         // Clear existing workouts
         unset($plan->workout);
@@ -53,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 if ($workout) {
     $xml = simplexml_load_file($xmlPath);
-    var_dump($xml);
     $plan = $xml;
     if ($plan) {
         // Plan was found, proceed with the rest of the code

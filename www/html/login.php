@@ -15,7 +15,10 @@ switch (@$_POST['akce']) {
 }
 function login(){
     $user = ziskej_uziv(@$_POST['email']);
-
+if($user == null){
+    echo "<script>setTimeout(()=>(alert('Uživatel s tímto emailem neexistuje')), 500);</script>";
+    return;
+}
     $_SESSION['id'] =  $user->id;
     $_SESSION['prezdivka'] =  $user->prezdivka;
 }

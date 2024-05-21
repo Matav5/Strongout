@@ -4,7 +4,8 @@ require "$INC/nav.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $xml = new SimpleXMLElement('<plan></plan>');
-    $xml->addChild('nazev', $_POST['nazev']);
+    $nazev = $_POST['nazev'];
+    $xml->addChild('nazev', $nazev);
     $xml->addChild('popis', $_POST['popis']);
     $xml->addChild('cil', $_POST['cil']);
 
@@ -15,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $workout->addChild('trvani', $workoutData['trvani']);
         $cviky = $workout->addChild('cviky');
         
-        foreach ($workoutData['cvik'] as $cvikData) {
+        foreach ($workoutData['cviky'] as $cvikData) {
             $cvik = $cviky->addChild('cvik');
             $cvik->addChild('nazev', $cvikData['nazev']);
             $cvik->addChild('sety', $cvikData['sety']);
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    $xmlPath = "$WORKOUT/plans.xml";
+    $xmlPath = "$WORKOUT/$nazev.xml";
     $xml->asXML($xmlPath);
     if (xmlValidateXSD($xmlPath, "$XML/workout.xsd")) {
         echo greenBox("Plán byl úspěšně přidán a validován.");

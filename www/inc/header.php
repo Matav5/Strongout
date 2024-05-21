@@ -17,5 +17,16 @@ $jePrihlaseny = isset($_SESSION['prezdivka'])
     <script src="<?=$JS?>/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@preline/plugin/dist/preline.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('navbar-toggle');
+        const navbarMenu = document.getElementById('navbar-collapse-with-animation');
+
+        toggleButton.addEventListener('click', function() {
+            navbarMenu.classList.toggle('hidden');
+        });
+    });
+    </script>
 </head>
 <body>

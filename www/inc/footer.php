@@ -1,4 +1,7 @@
-<footer class="py-3 bg-gray-800 dark:bg-neutral-800">
+
+  </div>
+</main>
+<footer class="py-3 bg-gray-700 dark:bg-neutral-700 mt-4">
 
       <div class="inline-flex items-center">
             <div class="ps-5 ms-5">
