@@ -23,13 +23,23 @@ Strongout je webová aplikace pro plánování a sledování cvičebních rutin.
 
 5. Přístup k aplikaci:
     - Web: `http://localhost:9000` (musel jsem zvolit jiný port kvůli jiným aplikacím)
+    - Databáze: 'localhost:9906'
     - Adminer: `http://localhost:8080` (Správa databáze)
+        - Heslo uživatele root: root
+        - Jméno databáze: strongout
+
+6. Přihlášení v aplikaci:
+    - email:heslo
+    - jarda@seznam.cz: jarda
+    - alena@seznam.cz: alena
+    Případně lze vytvořit vlastní účet (hesla jsou hashované)
 
 ## Struktura souborů
 - `www/html/`: Hlavní kód aplikace.
 - `www/inc/`: Includy pro společné funkce.
 - `www/xml/`: XML soubory pro cvičební plány.
 - `www/html/public/`: CSS a JS + jiné assety
+
 ## Klíčové soubory
 - `addPlan.php`: Přidání nových cvičebních plánů.
 - `editPlan.php`: Úprava existujících cvičebních plánů.
