@@ -28,9 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $xmlPath = "$WORKOUT/$nazev.xml";
     $xml->asXML($xmlPath);
     if (xmlValidateXSD($xmlPath, "$XML/workout.xsd")) {
-        echo greenBox("Plán byl úspěšně přidán a validován.");
+        addMessage("Plán byl úspěšně přidán a validován.");
     } else {
-        echo errorBox("Plán nebyl validní.");
+        addError("Plán nebyl validní.");
     }
 }
 ?>
@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label class="block text-sm font-medium text-gray-700">Opakování:</label>
         <input type="number" name="workouts[${workoutCount}][cviky][${exerciseCount}][repy]" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
         <label class="block text-sm font-medium text-gray-700">Odpočinek (min):</label>
-        <input type="text" name="workouts[${workoutCount}][cviky][${exerciseCount}][odpocinek]" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <input step="0.01" type="number" name="workouts[${workoutCount}][cviky][${exerciseCount}][odpocinek]" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
     `;
     workoutDiv.appendChild(exerciseDiv);
 }
@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label class="block text-sm font-medium text-gray-700">Popis workoutu:</label>
         <input type="text" name="workouts[${workoutCount}][popis]" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
         <label class="block text-sm font-medium text-gray-700">Trvání (min):</label>
-        <input type="text" name="workouts[${workoutCount}][trvani]" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <input step="0.01" type="number" name="workouts[${workoutCount}][trvani]" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
         <button type="button" onclick="addExercise(this.parentNode, ${workoutCount})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3">Přidat cvik</button>
         `;
         container.appendChild(workoutDiv);

@@ -30,6 +30,8 @@
     </div>
   </nav>
 </header>
+<div id="errors"></div>
+<div id="messages"></div>
 <main id="content">
   <div class="max-w-[85rem] mx-auto bg-white mb-6">
     

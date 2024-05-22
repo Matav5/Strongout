@@ -2,8 +2,20 @@
 <?php
 include "dirs.php";
 $prezdivka = @$_SESSION['prezdivka'];
-$jePrihlaseny = isset($_SESSION['prezdivka'])
+$jePrihlaseny = isset($_SESSION['prezdivka']);
 
+$errors = [];
+$messages = [];
+
+function addError($error){
+    GLOBAL $errors;
+    array_push($errors, $error);
+}
+function addMessage($message)
+{ 
+    GLOBAL $messages;
+    array_push($messages, $message);
+}
 ?>
 
 

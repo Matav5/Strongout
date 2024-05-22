@@ -24,14 +24,14 @@ if (($xmlFile = @$_FILES['xml']) && ($tmpName = @$xmlFile['tmp_name'])) {
     // $isValid = xmlValidateDTD($xmlFile, "$XML/recept.dtd");
     $isValid = xmlValidateXSD($tmpName, "$XML/workout.xsd");
     if (!$isValid)
-        errorBox('XML soubor není validní.');
+        addError('XML soubor není validní.');
     else {
         $name = $xmlFile['name'];
         $target = "$WORKOUT/$name";
         if (file_exists($target))
-            errorBox('Recept už máme.');
+            addError('Recept už máme.');
         elseif (rename($tmpName, $target))
-            greenBox("OK - $name nahráno");
+            addMessage("OK - $name nahráno");
 
     }
 }

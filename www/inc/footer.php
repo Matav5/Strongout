@@ -14,3 +14,28 @@
 </footer>
 </body>
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const errorsDiv = document.getElementById('errors');
+        <?php foreach ($errors as $error): ?>
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'bg-red-100 border border-red-400 text-red-700 m-8 p-4 rounded';
+            errorDiv.textContent = <?= json_encode($error) ?>;
+            errorsDiv.appendChild(errorDiv);
+        <?php endforeach; ?>
+
+        const messagesDiv = document.getElementById('messages');
+        <?php foreach ($messages as $message): ?>
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'bg-green-100 border border-green-400 text-green-700 m-8 p-4 rounded';
+            messageDiv.textContent = <?= json_encode($message) ?>;
+            messagesDiv.appendChild(messageDiv);
+        <?php endforeach; ?>
+    });
+</script>
+
+
+
+
+
