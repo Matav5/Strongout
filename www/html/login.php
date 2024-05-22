@@ -21,10 +21,12 @@ if($user == null){
 }
     $_SESSION['id'] =  $user->id;
     $_SESSION['prezdivka'] =  $user->prezdivka;
+    echo "<script>window.location.href = '/';</script>";
 }
 function logout(){
     unset($_SESSION['id']);
     unset($_SESSION['prezdivka']);
+    echo "<script>window.location.href = '/';</script>";
 }
 function register(){
     $user = ziskej_uziv(@$_POST['email']);
@@ -37,6 +39,7 @@ function register(){
     $user = ziskej_uziv(@$_POST['email']);
     $_SESSION["id"] = $user->id;
     $_SESSION["prezdivka"] = $user->prezdivka;
+    echo "<script>window.location.href = '/';</script>";
 }
 
 require "$INC/nav.php";

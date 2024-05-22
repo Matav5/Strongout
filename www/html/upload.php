@@ -22,7 +22,7 @@ require "$INC/tools.php";
 
 if (($xmlFile = @$_FILES['xml']) && ($tmpName = @$xmlFile['tmp_name'])) {
     // $isValid = xmlValidateDTD($xmlFile, "$XML/recept.dtd");
-    $isValid = xmlValidateXSD($tmpName, "$XML/workout.xsd");
+    $isValid = xmlValidateXSD($tmpName, "$XML/plan.xsd");
     if (!$isValid)
         addError('XML soubor není validní.');
     else {

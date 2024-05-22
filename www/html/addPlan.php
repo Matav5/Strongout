@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $xmlPath = "$WORKOUT/$nazev.xml";
     $xml->asXML($xmlPath);
-    if (xmlValidateXSD($xmlPath, "$XML/workout.xsd")) {
+    if (xmlValidateXSD($xmlPath, "$XML/plan.xsd")) {
         addMessage("Plán byl úspěšně přidán a validován.");
     } else {
         addError("Plán nebyl validní.");

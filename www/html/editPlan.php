@@ -34,7 +34,7 @@ $plan = simplexml_load_file($xmlPath);
         }
 
        $plan->asXML($xmlPath);
-        if (xmlValidateXSD($xmlPath, "$XML/workout.xsd")) {
+        if (xmlValidateXSD($xmlPath, "$XML/plan.xsd")) {
             addMessage("Plán byl úspěšně upraven a validován.");
         } else {
             addError("Plán nebyl validní.");

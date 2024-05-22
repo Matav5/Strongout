@@ -46,7 +46,7 @@ function jeFavorit($basename) {
         </h2>
         <div class="border border-gray-300 p-4 rounded-lg">
             <div class="text-gray-700">
-            <?= xmlTransform("$WORKOUT/$workout.xml", "$XML/workout.xsl") ?>
+            <?= xmlTransform("$WORKOUT/$workout.xml", "$XML/plan.xsl") ?>
             </div>
         </div>
     </div>
